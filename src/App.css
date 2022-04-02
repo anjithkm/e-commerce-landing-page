@@ -1,11 +1,93 @@
-.App {
+.App-container{
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50px;
+  width: 50px;
   pointer-events: none;
 }
+.App-menu{
+  display: none;
+}
+.Search-logo{
+  height: 25px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.Cart-logo{
+height: 35px;
+width: 35px
+}
+
+.Search-bar-container{
+width: 1200px;
+display: flex;
+flex-direction: row;
+justify-content: end;
+padding: 15px
+}
+
+.Search-bar{
+height: 25px;
+width: 300px;
+padding: 5px;
+border-radius: 5px;
+background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: right
+}
+
+.Cart-user-container{
+display: flex;
+flex-direction: row;
+padding: 15px
+}
+.Cart-notification{
+height: 15px;
+width: 15px;
+position: absolute;
+margin-top: 3px;
+background-color: red;
+border-radius: 50%;
+font-size: 10px;
+font-weight: bold;
+}
+.Cart-dropdown{
+  width:400px;
+  height:auto;
+  background:white;
+  color:#FFF;
+  padding:5px 2px;
+  text-align:center;
+  top:60px;
+  position:absolute;
+  right:15px;
+  border-radius: 5px;
+  border-color: #686a6e;
+  border-style: solid;
+  border-width: 1px;
+}
+.Cart-item-container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.Cart-item{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: black;
+  justify-content: space-between;
+}
+
+.Close{
+  display: none;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,9 +95,37 @@
   }
 }
 
+@media (min-width: 480px) {
+  header {
+    background-color: lightgreen;
+  }
+}
+
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  justify-content: center;
+  align-content: center;
+}
+
+.App-body{
+  background-color: rgba(243, 242, 242, 0.808);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-footer {
+  background-color: white;
+  min-height: 20vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +134,203 @@
   color: white;
 }
 
-.App-link {
+.Card-container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.Category-container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.Card{
+  display: grid;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 280px;
+  height: 400px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+-webkit-box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+-moz-box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+}
+
+.Category-tab{
+  padding: 5px;
+  border-radius: 5px;
+  font-size: small;
+  width: 220px;
+  height: 30px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+  -webkit-box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+  -moz-box-shadow: 8px 13px 17px -10px rgba(0,0,0,0.64);
+  cursor: pointer;
+}
+
+.Display-image{
+  padding: 5px;
+  width: 180px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Card-display-content{
+  min-width: 90%;
+  max-height: 100%;
+  border: none;
+  background-color: white;
+}
+
+.Card-display-name{
+  font-size: medium;
+  font-weight: bold;
+  color: black;
+}
+
+.Card-display-discription{
+  font-size: small;
+  color: black;
+}
+
+.Card-display-price{
+  font-size: small;
+  color: black;
+  font-weight: bold;
+}
+
+.Card-buy-button{
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  -moz-box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  cursor: pointer;
+}
+
+.Card-cart-button{
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  -webkit-box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  -moz-box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.85);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+    @media (max-width:1349px){
+
+      /*Insert your styles here*/
+      .Category-container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 15px;
+        padding: 15px;
+      }
+      
+      .Card-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        padding: 15px;
+      }
+      
+      }
+
+      @media (max-width:1224px){
+
+        /*Insert your styles here*/
+        .Category-container{
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          gap: 15px;
+          padding: 15px;
+        }
+        
+        .Card-container{
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap: 15px;
+          padding: 15px;
+        }
+        
+        }
+
+        @media (max-width:945px){
+
+          /*Insert your styles here*/
+          .Category-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            padding: 15px;
+          }
+          
+          .Card-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            padding: 15px;
+          }
+          
+          }
+
+          @media (max-width:640px){
+
+            /*Insert your styles here*/
+            .Category-container{
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 15px;
+              padding: 15px;
+            }
+            
+            .Card-container{
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 15px;
+              padding: 15px;
+            }
+
+            .Cart-user-container{
+              display: none;
+              }
+            
+            .App-logo {
+                display: none;
+              }
+            .App-menu{
+              height: 50px;
+              width: 50px;
+              display: block;
+              cursor: pointer;
+              }
+            
+            }
+      
+
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +341,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
